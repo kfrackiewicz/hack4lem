@@ -1,0 +1,126 @@
+{
+	"id": "root",
+	"title": "głównym",
+	"children": [
+		{
+			"id": "add",
+			"title": "Zyskaj środki",
+			"description": "Uzyskaj dodatkowe środki zgodnie z Twoim zapotrzebowaniem",
+			"icon": "add",
+			"color": "#FA982D",
+			"children": [
+				{
+					"id": "add_credit",
+					"title": "Kredyty",
+					"description": "Uzyskaj od banku dodatkowy kredyt",
+					"icon": "credit",
+					"color": "#F5C898",
+					"children": [
+						{
+							"id": "add_credit_cash",
+							"title": "Gotówka",
+							"description": "Przejdź do wniosku o kredyt gotówkowy",
+							"icon": "cash",
+							"color": "#F5C898"
+						},
+						{
+							"id": "add_credit_car",
+							"title": "Samochód",
+							"description": "Przejdź do wniosku kredyt na samochód",
+							"icon": "car",
+							"color": "#98F58C"
+						},
+						{
+							"id": "add_credit_house",
+							"title": "Dom",
+							"description": "Przejdź do wniosku o kredyt hipoteczny",
+							"icon": "house",
+							"color": "#4F5CA8"
+						},
+						{
+							"id": "add_credit_renew",
+							"title": "Odnawialny",
+							"description": "Przejdź do wniosku o kredyt odnawialny",
+							"icon": "reuse",
+							"color": "#7F90F5"
+						},
+						{
+							"id": "add_credit_card",
+							"title": "Karta kredytowa",
+							"description": "Przejdź do wniosku o wydanie karty kredytowej",
+							"icon": "card",
+							"color": "#A87E4F"
+						}
+					]
+				},
+				{
+					"id": "add_limit",
+					"title": "Limity",
+					"icon": "limit",
+					"description": "Zwiększ posiadane limity",
+					"color": "#98F58C",
+					"children": [
+						{
+							"id": "add_limit_card",
+							"title": "Karta kredytowa",
+							"description": "Zwiększ limit na posiadanej karcie kredytowej",
+							"icon": "card",
+							"color": "#5AA84F"
+						},
+						{
+							"id": "add_limit_reuse",
+							"title": "Odnawialny",
+							"description": "Zwiększ limit na kredycie odnawialnym",
+							"icon": "reuse",
+							"color": "#8DF57F"
+						}
+					]
+				},
+				{
+					"id": "add_friend",
+					"title": "Przelew oczekujący",
+					"description": "Poproś znajomego o przelew",
+					"color": "#4F5CA8",
+					"icon": "friend"
+				}
+			]
+		},
+		{
+			"id": "substract",
+			"title": "Zarządzaj środkami",
+			"description": "Zarządzaj swoimi środkami",
+			"icon": "substract",
+			"color": "#49AD59",
+			"children": [
+				{
+					"id": "substract_transfer",
+					"title": "Przelew",
+					"description": "Wykonaj przelew środków",
+					"icon": "transfer",
+					"color": "#98F5A7"
+				},
+				{
+					"id": "substract_phone",
+					"title": "Doładowanie",
+					"description": "Zasil swój telefon pre-paid",
+					"icon": "phone",
+					"color": "#98F58C"
+				},
+				{
+					"id": "substract_credit",
+					"title": "Kredyty",
+					"description": "Wcześniejsza spłata kredytu",
+					"icon": "credit",
+					"color": "#76A84F"
+				},
+				{
+					"id": "substract_limit",
+					"title": "Limity",
+					"description": "Pomniejsz swoje zadłużenie na limitach kredytowych",
+					"icon": "reuse",
+					"color": "#B3F57F"
+				}
+			]
+		}
+	]
+}

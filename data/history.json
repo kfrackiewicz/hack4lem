@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "type": "transfer_out",
+        "amount": -20.21,
+        "title": "Rachunek za prąd",
+        "when": "dziś"
+    },
+    {
+        "id": "2",
+        "type": "transfer_in",
+        "amount": 2021,
+        "title": "Wynagrodzenie",
+        "when": "wczoraj"
+    },
+    {
+        "id": "3",
+        "type": "phone",
+        "amount": -50,
+        "title": "Doładowanie telefonu",
+        "when": "3 dni temu"
+    },
+    {
+        "id": "4",
+        "type": "credit",
+        "amount": -200,
+        "title": "Spłata karty kredytowej",
+        "when": "3 dni temu"
+    },
+    {
+        "id": "5",
+        "type": "rent",
+        "amount": -350.01,
+        "title": "Czynsz",
+        "when": "zeszły tydzień"
+    },
+    {
+        "id": "6",
+        "type": "shooping",
+        "amount": -80,
+        "title": "Zakupy",
+        "when": "zeszły tydzień"
+    }
+]

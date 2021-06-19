@@ -1,0 +1,419 @@
+body {
+    background-color: #452636;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Mulish', sans-serif;
+    transition: background-color .2s ease-in-out;
+    overscroll-behavior: none;
+}
+
+welcome {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #383030;
+    background-image: url(../images/4lem.png);
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position: center center;
+    animation: welcome .3s linear forwards;
+
+    color: white;
+}
+
+welcome.hide {
+    pointer-events: none;
+    animation: welcomeHide .3s linear forwards;
+}
+
+svg {
+    z-index: 3;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    border-radius: 100px;
+}
+
+svg path {
+    opacity: 0.6;
+    transition: opacity .2s ease-in-out;
+    animation: menu 1s linear forwards;
+}
+
+svg image {
+    pointer-events: none;
+}
+
+svg path.hover {
+    opacity: 1;
+}
+
+wrapper,
+page,
+settings {
+    position: absolute;
+    display: inline-block; 
+    top: 5px;
+    left: 5px;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 50px;
+    border: 1px solid white;
+    background-color: white;
+    transition: filter .2s ease-in-out;
+}
+
+page {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+    animation: page .1s linear forwards;
+    border-width: 5px;
+    background: white;
+}
+
+page hello {
+    text-align: center;
+    right: 0;
+    left: 0;
+}
+
+page description {
+    position: absolute;
+    top: 98px;
+    left: 10px;
+    right: 10px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+page placeholder {
+    position: absolute;
+    top: 200px;
+    left: 20px;
+    right: 20px;
+    bottom: 100px;
+    overflow: auto;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+settings{
+    color: white;
+    border-color: #452636;
+    background-color: #88516c;
+    z-index: 4;
+    animation: settings .5s linear forwards;
+}
+
+settings > tree {
+    position: absolute;
+    top: 100px;
+    bottom: 100px;
+    overflow: auto;
+    left: 10px;
+    right: 10px;
+    animation: settings .5s linear forwards;
+}
+
+tree {
+    display: block;
+}
+
+tree > tree {
+    padding-left: 20px;
+}
+
+tree label {
+    display: block;
+    padding: 3px 0;
+    font-size: 1.3em;
+}
+
+tree label.group {
+    font-weight: bold;
+}
+
+settings.hide {
+    animation: settingsHide .3s linear forwards;
+    pointer-events: none;
+}
+
+page.hide {
+    animation: pageHide .3s linear forwards;
+    pointer-events: none;
+}
+
+close {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    font-size: 1.2em;
+}
+
+body.inMenu wrapper,
+body.hide wrapper {
+    filter: blur(30px);
+}
+
+body.inMenu {
+    background-color: #3b656d;
+}
+
+hello {
+    position: absolute;
+    right: 50px;
+    top: 30px;
+    font-size: 14px;
+    text-align: right;
+    z-index: 1;
+    animation: hello 1s normal forwards; 
+}
+
+balance,
+menuTitle {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 100px;
+    font-size: 16px;
+    z-index: 1;
+    animation: balance 1s normal forwards;
+    display: block;
+    background: #abd3ca;
+    padding: 20px;
+    border: 5px solid #3b656d;
+    border-radius: 20px;
+}
+
+menuTitle {
+    font-size: 15px;
+    animation: none;
+    border-color: #452636;
+    background-color: #b3899e;
+    opacity: 0;
+    transition: opacity .3s ease-in-out, border-color .3s ease-in-out, background-color .3s ease-in-out;
+}
+
+menuTitle main {
+    display: block;
+    font-size: 0.3em;
+    font-weight: bold;
+}
+
+history {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 250px;
+    z-index: 1;
+    font-size: 12px;
+    animation: history 1s normal forwards;    
+    bottom: 125px;
+    overflow: auto;
+}
+
+body.hide history {
+    animation: historyHide .3s normal forwards;
+}
+
+body.hide balance {
+    animation: balanceHide .3s normal forwards;
+}
+
+body.hide hello {
+    animation: helloHide .3s normal forwards;
+}
+
+body.hide menuTitle {
+    opacity: 1;
+}
+
+body.inMenu trigger,
+body.inMenu history {
+    display: none;
+}
+
+history div {
+    position: relative;
+    padding: 10px 0;
+    margin-left: -10px;
+    padding-left: 5px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+history div.in {
+    border-left: 5px solid #356169
+}
+
+history div.out {
+    border-left: 5px solid #abd3ca
+}
+
+history div .when {
+    position: absolute;
+    top: 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    left: 5px;
+}
+
+history div .title {
+    font-size: 1.2em;
+    max-width: 70%;
+    padding-top: 5px;
+    display: inline-block;
+}
+
+history div .amount {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-weight: bold;
+}
+
+hello span,
+menuTitle span,
+balance span {
+    font-size: 2em;
+    display: block;
+    font-weight: bold;
+}
+
+arrow {
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 35px);
+    transform: rotate(45deg);
+    border-left: 15px solid #5ea59b;
+    border-top: 15px solid #5ea59b;
+    border-radius: 15px;
+    animation: arrow 1s normal forwards; 
+    animation-iteration-count: 1;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+trigger {
+    position: absolute;
+    bottom: 25px;
+    left: calc(50% - 50px);
+    background: url(../images/trigger.png) no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: translate .2s ease-in-out, left .1s ease-in-out, height .1s ease-in-out, width .1s ease-in-out, bottom .1s ease-in-out;
+    z-index: 2;
+}
+
+trigger.up {
+    height: 150px;
+    width: 150px;
+    bottom: 0;
+    left: calc(50% - 75px);
+    pointer-events: none;
+}
+
+triggerDrop {
+    position: absolute;
+    background: url(../images/trigger.png) no-repeat;
+    background-size: contain;
+    left: calc(50% - 75px);
+    top: calc(50% - 75px);
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity .1s ease-in-out;
+    pointer-events: none;
+}
+
+triggerDrop.up {
+    opacity: .4;
+    pointer-events: auto;
+    transition: opacity .8s ease-in-out;
+}
+
+@keyframes arrow {
+    0% { opacity:0; transform: rotate(45deg) translate3d(0, 0, 0); }	
+    20% { opacity:1; transform: rotate(45deg) translate3d(-50px, -50px, 0); }	
+    80% { opacity:1; transform: rotate(45deg) translate3d(-150px, -150px, 0); }	
+    100% { opacity:0; transform: rotate(45deg) translate3d(-200px, -200px, 0); }	
+}
+
+@keyframes welcome {
+    from { opacity:0; transform: translate3d(0, -100px, 0); }	
+    to { opacity:1; transform: translate3d(0, 0, 0); }	
+}
+
+@keyframes welcomeHide {
+    from { opacity:1; transform: translate3d(0, 0, 0); }	
+    to { opacity:0; transform: translate3d(0, 100px, 0); }	
+}
+
+@keyframes hello {
+    from { opacity:0; transform: translate3d(0, -100px, 0); }	
+    to { opacity:1; transform: translate3d(0, 0, 0); }	
+}
+
+@keyframes helloHide {
+    from { opacity:1; transform: translate3d(0, 0, 0); }	
+    to { opacity:0; transform: translate3d(0, 100px, 0); }	
+}
+
+@keyframes balance {
+    from { opacity:0; transform: translate3d(-100px, 0, 0); }	
+    to { opacity:1; transform: translate3d(0, 0, 0); }	
+}
+
+@keyframes balanceHide {
+    from { opacity:1; transform: translate3d(0, 0, 0); }	
+    to { opacity:0; transform: translate3d(100px, 0, 0); }	
+}
+
+@keyframes history {
+    from { opacity:0; transform: translate3d(0, 100px, 0); }	
+    to { opacity:1; transform: translate3d(0, 0, 0); }	
+}
+
+@keyframes historyHide {
+    from { opacity:1; transform: translate3d(0, 0, 0); }	
+    to { opacity:0; transform: translate3d(0, -100px, 0); }	
+}
+@keyframes menu {
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes settings {
+    from { opacity:0; transform: translate3d(0, -100px, 0); }	
+    to { opacity:1; transform: translate3d(0, 0, 0); }	
+}
+
+@keyframes settingsHide {
+    from { opacity: 1; transform: translate3d(0, 0, 0); }	
+    to { opacity: 0; transform: translate3d(0, 100px, 0); }	
+}
+
+@keyframes page {
+    from { opacity:0; transform: translate3d(0, -100px, 0); }	
+    to { opacity:1; transform: translate3d(0, 0, 0); }	
+}
+
+@keyframes pageHide {
+    from { opacity: 1; transform: translate3d(0, 0, 0); }	
+    to { opacity: 0; transform: translate3d(0, 100px, 0); }	
+}
